@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<title>Reglas de produccion</title>
+</head>
+<body>	
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4"><strong>Reglas de producción</strong></h1>
+			<p class="lead text-justify">Las Reglas de Producción son reglas del tipo Si-Entonces. Su popularidad es parcialmente debida al hecho que han sido utilizados con éxito en la construcción de Sistemas Expertos. Se utilizan las reglas para examinar un conjunto de datos y solicitar nueva información hasta llegar a un diagnóstico.</p>
+			<a href="https://www.youtube.com/results?search_query=polongitec" style="text-decoration: none;"><h3 class="text-danger"><span class="fab fa-youtube"></span>PolongiTec</h3></a>
+		</div>		
+	</div>
+	<div class="container">
+		<div class="float-left col-6">
+			<table class="table text-center border">
+				<thead class="thead-dark">
+					<tr>
+						<th colspan="3">CONJUNCIÓN</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="alert-success">
+						<td>p</td>
+						<td>q</td>
+						<td>p ^ q</td>
+					</tr>
+					<tr>
+						<td>
+							<select id="conjuncion1" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>
+						<td>
+							<select id="conjuncion2" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>
+						<td>
+							<input type="text" name="res" id="res" class="form-control text-center" readonly
+							placeholder="Resultado">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<button class="btn btn-success" onclick="conjuncion()">Calcular</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>			
+		<div class="float-left col-6">
+			<table class="table text-center border">
+				<thead class="thead-dark">
+					<tr>
+						<th colspan="3">DISYUNCIÓN</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="alert-primary">
+						<td>p</td>
+						<td>q</td>
+						<td>p v q</td>
+					</tr>
+					<tr>
+						<td>
+							<select id="disyuncion1" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>
+						<td>
+							<select id="disyuncion2" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>
+						<td>
+							<input type="text" name="resdis" id="resdis" class="form-control text-center" readonly 
+							placeholder="Resultado">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<button class="btn btn-success" onclick="disyuncion()">Calcular</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="float-left col-6">
+			<table class="table text-center border">
+				<thead class="thead-dark">
+					<tr>
+						<th colspan="3">CONDICIONAL</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="alert-warning">
+						<td>p</td>
+						<td>q</td>
+						<td>p -> q</td>
+					</tr>
+					<tr>
+						<td>
+							<select id="condicional1" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>
+						<td>
+							<select id="condicional2" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>
+						<td>
+							<input type="text" name="rescon" id="rescon" class="form-control text-center" readonly 
+							placeholder="Resultado">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<button class="btn btn-success" onclick="condicional()">Calcular</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="float-left col-6">
+			<table class="table text-center border">
+				<thead class="thead-dark">
+					<tr>
+						<th colspan="3">BICONDICIONAL</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="alert-info">
+						<td>p</td>
+						<td>q</td>
+						<td>p <-> q</td>
+					</tr>
+					<tr>
+						<td>
+							<select id="bicondicional1" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>
+						<td>
+							<select id="bicondicional2" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>
+						<td>
+							<input type="text" name="resbi" id="resbi" class="form-control text-center" readonly 
+							placeholder="Resultado">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<button class="btn btn-success" onclick="bicondicional()">Calcular</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row justify-content-center">
+			<table class="table text-center border col-6">
+				<thead class="thead-dark">
+					<tr>
+						<th colspan="3">NEGACIÓN</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="alert-danger">
+						<td>p</td>						
+						<td>~p</td>
+					</tr>
+					<tr>
+						<td>
+							<select id="negacion1" class="form-control">
+								<option selected disabled="">Seleccione</option>
+								<option value="V">V</option>
+								<option value="F">F</option>									
+							</select>
+						</td>						
+						<td>
+							<input type="text" name="resneg" id="resneg" class="form-control text-center" readonly
+							placeholder="Resultado">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<button class="btn btn-success" onclick="negacion()">Calcular</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="page-footer font-small blue pt-4">
+		<div class="footer-copyright text-center py-3">© 2020 Copyright:
+			<a href="https://www.youtube.com/channel/UC2A-fyx6GCi-9KsMMkMuitw"> PolongiTec</a>
+		</div>
+	</footer>		
+</body>
+<script type="text/javascript">
+	function conjuncion()
+	{
+		/* Para obtener el valor */
+		var conj1 = document.getElementById("conjuncion1").value;
+		var conj2 = document.getElementById("conjuncion2").value;
+		if(conj1 == "V" &&  conj2 == "V"){
+			document.getElementById("res").value = "Verdadero";			
+		}else if((conj1 == "V" && conj2 == "F") || (conj1 == "F" && conj2 == "V") || (conj1 == "F" && conj2 == "F")){
+			document.getElementById("res").value = "Falso";			
+		}
+
+	}
+	function disyuncion()
+	{
+		/* Para obtener el valor */
+		var dis1 = document.getElementById("disyuncion1").value;
+		var dis2 = document.getElementById("disyuncion2").value;
+		if(dis1 == "F" &&  dis2 == "F"){
+			document.getElementById("resdis").value = "Falso";			
+		}else if((dis1 == "V" && dis2 == "V") || (dis1 == "V" && dis2 == "F") || (dis1 == "F" && dis2 == "V")){
+			document.getElementById("resdis").value = "Verdadero";			
+		}
+
+	}
+	function condicional()
+	{
+		/* Para obtener el valor */
+		var condi1 = document.getElementById("condicional1").value;
+		var condi2 = document.getElementById("condicional2").value;
+		if(condi1 == "V" &&  condi2 == "F"){
+			document.getElementById("rescon").value = "Falso";			
+		}else if((condi1 == "V" && condi2 == "V") || (condi1 == "F" && condi2 == "V") || 
+			(condi1 == "F" && condi2 == "F")){
+			document.getElementById("rescon").value = "Verdadero";			
+		}
+
+	}
+	function bicondicional()
+	{
+		/* Para obtener el valor */
+		var bico1 = document.getElementById("bicondicional1").value;
+		var bico2 = document.getElementById("bicondicional2").value;
+		if((bico1 == "V" && bico2 == "V") || (bico1 == "F" && bico2 == "F")){
+			document.getElementById("resbi").value = "Verdadero";			
+		}else if((bico1 == "V" && bico2 == "F") || (bico1 == "F" && bico2 == "V")){
+			document.getElementById("resbi").value = "Falso";			
+		}
+
+	}
+	function negacion()
+	{
+		/* Para obtener el valor */
+		var neg = document.getElementById("negacion1").value;		
+		if(neg == "F"){
+			document.getElementById("resneg").value = "Verdadero";			
+		}else if(neg == "V"){
+			document.getElementById("resneg").value = "Falso";			
+		}
+
+	}
+</script>
+</html>
