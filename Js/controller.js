@@ -61,7 +61,7 @@ function estado(){
 	function sonIguales(...args){
 		valores = args.map(x=>x.innerHTML);
 		if(valores[0] != "" && valores.every((x, i, arr) => x===arr[0])){
-			args.forEach(x => x.style.backgroundColor = "Fuchsia")
+			args.forEach(x => x.style.backgroundColor = "Chartreuse")
 			return true;
 		}
 		else{
