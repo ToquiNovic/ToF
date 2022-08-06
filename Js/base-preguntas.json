@@ -1,0 +1,43 @@
+[
+    {
+        "categoria": "conjuncion",
+        "pregunta": "V + V = ?",
+        "respuesta": "V",
+        "incorrecta1": "F",
+        "incorrecta2": ".l.",
+        "incorrecta3": "uwu?",
+        "imagen": "/image/preguntas/elbicho.jpg",
+        "object_fit": "cover"        
+    },
+    {
+        "categoria": "conjuncion",
+        "pregunta": "V + F = ?",
+        "respuesta": "F",
+        "incorrecta1": "V",
+        "incorrecta2": "..",
+        "incorrecta3": "uu?",
+        "imagen": "",
+        "object_fit": "cover"        
+    },
+    {
+        "categoria": "conjuncion",
+        "pregunta": "F + V = ?",
+        "respuesta": "F",
+        "incorrecta1": "V",
+        "incorrecta2": "INCIRR.",
+        "incorrecta3": "u?",
+        "imagen": "/image/preguntas/elbicho.jpg",
+        "object_fit": "cover"        
+    },
+    {
+        "categoria": "conjuncion",
+        "pregunta": "F + F = ?",
+        "respuesta": "F",
+        "incorrecta1": "V",
+        "incorrecta2": "INCIRFFFFFR.",
+        "incorrecta3": "uAAAA?",
+        "imagen": "",
+        "object_fit": "cover"        
+    }
+
+]

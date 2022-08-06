@@ -1,3 +1,7 @@
+*{
+	transition: all 0.3s;
+}
+
 body{
 	background: linear-gradient(to right, #1083c5, #054265);
 	color:  white;
@@ -14,6 +18,22 @@ h1{
 
 h2{
 	font-size:  2.0em;
+}
+
+.contenedor{
+	width: 98vw;
+	height: 95vh;
+	display: inline-flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items:flex-start;
+}
+
+.caja_tablero{
+	background-color: yellowgreen;
+	width: 700px;
+    height: 600px;
+    float: left;
 }
 
 #tablero{
@@ -34,4 +54,52 @@ h2{
 #textoVictoria{
 	visibility: hidden;
 	color:whitesmoke;
+}
+
+.caja_preguntas{
+	background-color: violet;
+	width: 550px;
+    height: 600px;
+    float: left;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+.encabezado {
+	background-color: rgb(99, 30, 30);
+	min-width: 300px;
+	width: 70%;
+	max-width: 600px;
+	padding: 10px;
+}
+
+.categoria{
+	opacity: 0.3;
+	text-align: left;
+}
+
+.pregunta{
+	padding: 10px;
+}
+
+.imagen{
+	object-fit: cover;
+	height: 200px;
+	width: 100%;
+}
+
+.btn{
+	background: #054265;
+	width: 60%;
+	max-width: 550px;
+	padding: 10px;
+	margin: 5px;
+}
+
+.btn:hover{
+	background: #1083c5;
+	cursor: pointer;
+	transform: scale(1.05);
 }

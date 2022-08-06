@@ -18,6 +18,7 @@ function ponerFicha(event){
 		puestas += 1;
 		
 		let estadoPartida = estado();
+		
 		if(estadoPartida == 0){
 			cambiarTurno();
 			if(puestas < 9){
