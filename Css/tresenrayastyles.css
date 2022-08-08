@@ -72,6 +72,8 @@ h2{
 	min-width: 300px;
 	width: 70%;
 	max-width: 600px;
+	display: grid;
+	justify-items: center;
 	padding: 10px;
 }
 

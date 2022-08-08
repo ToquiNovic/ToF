@@ -3,13 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>ToF - Juego</title>
+	<link rel="icon" href="/Image/icono.png">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 	<link rel="stylesheet" href="/Css/tresenrayastyles.css">
-	<link rel="icon" href="/Image/icono.png">
 	<script src="/Js/controller.js" async></script>
+	<script src="/Js/preguntas.js" async></script>
 </head>
 <body>
 	<div class="contenedor">
@@ -56,95 +61,6 @@
 			</div>
 		</div>
 	</div>
-
-
-	<script>
-
-		let base_preguntas = readText("/Js/base-preguntas.json")
-		let interprete_bp = JSON.parse(base_preguntas)
-		let pregunta
-		let posibles_respuestas
-		let btn_correspondiente = [
-			select_id("btn1"),select_id("btn2"),
-			select_id("btn3"),select_id("btn4")
-		]
-
-		escogerPreguntaAleatoria()
-
-		function escogerPreguntaAleatoria() {
-			escogerPregunta(Math.floor(Math.random()*interprete_bp.length))
-		}
-		
-		function escogerPregunta(n){
-			pregunta = interprete_bp[n]
-			select_id("categoria").innerHTML = pregunta.categoria
-			select_id("pregunta").innerHTML = pregunta.pregunta
-			style("imagen").objectFit = pregunta.objectFit;
-			desordenarRespuestas(pregunta)
-			if (pregunta.imagen) {
-				select_id("imagen").setAttribute("src",pregunta.imagen)
-				style("imagen").height = "200px"
-				style("imagen").width = "100%"
-			}else{
-				style("imagen").height = "0px"
-				style("imagen").width = "0px"
-			}
-		}
-
-		function desordenarRespuestas(pregunta){
-			posibles_respuestas = [
-				pregunta.respuesta,
-				pregunta.incorrecta1,
-				pregunta.incorrecta2,
-				pregunta.incorrecta3
-			]
-
-			posibles_respuestas.sort(() => Math.random()-0.5)
-
-			select_id("btn1").innerHTML = posibles_respuestas[0]
-			select_id("btn2").innerHTML = posibles_respuestas[1]
-			select_id("btn3").innerHTML = posibles_respuestas[2]
-			select_id("btn4").innerHTML = posibles_respuestas[3]
-		}
-
-		function oprimir_btn(i){
-			if(posibles_respuestas[i] == pregunta.respuesta){
-				btn_correspondiente[i].style.background = "green"
-			}else{
-				btn_correspondiente[i].style.background = "red"
-			}
-			setTimeout(() => {
-				reiniciar()
-			}, 1000);
-		}
-
-		function reiniciar(){
-			for (const btn of btn_correspondiente){
-				btn.style.background = "#054265"
-			}
-
-			escogerPreguntaAleatoria()
-		}
-
-		function select_id(id){
-			return document.getElementById(id)
-		}
-
-		function style(id){
-			return select_id(id).style
-		}
-
-		function readText(ruta_local){
-			var texto = null;
-			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.open("GET", ruta_local, false);
-			xmlhttp.send();
-			if (xmlhttp.status == 200){
-				texto = xmlhttp.responseText;
-			}
-			return texto;
-		}
-	</script>
 
 </body>
 </html>
