@@ -9,7 +9,6 @@
     <!--<meta name="theme-color" content="#17a2b8">-->
     <link rel="shortcut icon" type="image/png" href="/Image/icono.png">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="/css/all.css">
     <link rel="stylesheet" type="text/css" href="/css/tabler-icons.min.css">
     <link rel="stylesheet" href="/Css/u.css">
     <script src="https://kit.fontawesome.com/2a7871fc69.js" crossorigin="anonymous"></script>
@@ -18,21 +17,25 @@
 
 <body>
     <header class="normal">
-        <a href="../" class="ap">
-            <div class="return">
-                <i class="ti ti-arrow-left ti-huge"></i>
-            </div>
-        </a>
         <div class="title">
             <!--<div id="title"></div>-->
-            <h2>Generador de Tablas de verdad</h2>
-        </div>
-        <div class="return conf">
-            <i class="fas fa-cog fa-2x"></i>
+            <h1>
+                <a href="/index.html">
+                     <img src="/image/Logo-ToF-Pequeño.png" alt="logo ToF" />
+                </a>
+            </h1>
+            <nav>
+                <a href="/index.html">Inicio</a>
+                <a href="https://es.wikipedia.org/wiki/Tabla_de_verdad" target="_blank">Teoria</a>
+                <a href="/Html/reglasDeProduccion.html">Practica</a>
+                <a href="/Html/trush-table-generator.html">Generador</a>
+                <a href="/Html/tresenraya.html">Jugar</a>
+           </nav>
         </div>
     </header>
     <main>
         <div class="container">
+            <h2>Generador de Tablas de verdad</h2>
             <div class="tool">
                 <input type="text" class="input" id="formula" style="width: 600px;" value="((p⇒q)∧p)⇒q">
                 <table>
