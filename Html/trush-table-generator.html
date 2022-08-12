@@ -9,8 +9,10 @@
     <!--<meta name="theme-color" content="#17a2b8">-->
     <link rel="shortcut icon" type="image/png" href="/Image/icono.png">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="../css/all.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.css">
     <link rel="stylesheet" type="text/css" href="/css/tabler-icons.min.css">
+    <link rel="stylesheet" href="/Css/u.css">
+    <script src="https://kit.fontawesome.com/2a7871fc69.js" crossorigin="anonymous"></script>
     
 </head>
 
@@ -32,7 +34,7 @@
     <main>
         <div class="container">
             <div class="tool">
-                <input type="text" class="input" id="formula" style="width: 300px;" value="((p⇒q)∧p)⇒q">
+                <input type="text" class="input" id="formula" style="width: 600px;" value="((p⇒q)∧p)⇒q">
                 <table>
                     <tr>
                         <td class="key" onclick="insert('p')">p</td>
@@ -50,7 +52,8 @@
                         <td class="key" onclick="insert('⇒')">⇒</td>
                         <td class="key" onclick="insert('⇔')">⇔</td>
                         <td class="key" onclick="insert('⊕')">⊕</td>
-                        <td class="key" id="remove"><i class="ti ti-trash ti-small"></i></td>
+                        <td class="key" id="remove"><i class="fa-solid fa-trash-can"></i></td>
+                        
                     </tr>
                 </table>
                 <div class="type truth-table">
@@ -65,62 +68,9 @@
                 <div class="truth table">
                     <table id="truthTable"></table>
                 </div>
-                <div class="share">
-                    <script src="https://apis.google.com/js/platform.js" async defer></script>
-                </div>
             </div>
-            <div class="extra">
-                <div class="principal">
-                    <div id="89163-1" class="ad-megabanner">
-                        <script src="//ads.themoneytizer.com/s/gen.js?type=1"></script>
-                        <script src="//ads.themoneytizer.com/s/requestform.js?siteId=89163&formatId=1"></script>
-                    </div>
-                    <h3>A powerful tool to generate propositional logic truth tables</h3>
-                    <div class="separator"></div>
-                    <h4>Instructions</h4>
-                    <p>Introduce logical sentence with aid of the keys. At this moment it is only available 5
-                        propositional variables (p,q,r,s,t). More information how to introduce properly the sentence in
-                        the generator, go to area <i>"How can I use properly truth table generator?"</i>. Once you have
-                        introduced your sentence, choose type of table you want (True/False) or (1/0), and click
-                        <kbd>Generate</kbd> and automatically truth table will be created. If you want to save it,
-                        click<kbd><i class="fas fa-download"></i></kbd> to download as .png.</p>
-                    <div class="separator"></div>
-                    <h4>How can I suse use properly truth table generator?</h4>
-                    <p>If sentence is not introduced properly, program will not understand it and will not process it
-                        properly. Ensure propositions and connectors are well placed according to propositional logic
-                        rules. Also, ensure that brackets are well introduced. Brackets are very important because they
-                        setup the order in which program starts to operate. If they are not properly introduced, program
-                        will jump steps or may not generate truth table properly. If you check following examples, you
-                        will find that altough they have same elements, second one does not work because it does not
-                        have all necessary brackets:</p>
-                    <ul>
-                        <li>1º - <i>((((p⇒(q∧r))∧(s⇒(¬r)))∧(s∨t))∧p)⇒t</i></li>
-                        <li>2º - <i>(p⇒(q∧r)∧(s⇒(¬r))∧(s∨t)∧p)⇒t</i></li>
-                    </ul>
-                    <div class="separator"></div>
-                    <h4>Logical operators included in this generator</h4>
-                    <ul>
-                        <li><b>¬</b> - Denial</li>
-                        <li><b>∧</b> - Conjunction</li>
-                        <li><b>∨</b> - Disjunction</li>
-                        <li><b>⇒</b> - Conditional</li>
-                        <li><b>⇔</b> - Biconditional</li>
-                        <li><b>⊕</b> - Exclusive disjunction</li>
-                    </ul>
-                    <div class="separator"></div>
-                    <h4>Recommended article</h4>
-                    <p><a href="https://instrumt.com/blog/como-elaborar-una-tabla-de-verdad" class="link"
-                            target="_blank">How to elaborate manually a truth table</a></p>
-                    <div id="89163-28" class="ad-megabanner">
-                        <script src="//ads.themoneytizer.com/s/gen.js?type=28"></script>
-                        <script src="//ads.themoneytizer.com/s/requestform.js?siteId=89163&formatId=28"></script>
-                    </div>
-                    <div class="separator"></div>
     </main>
 
-    <script type="text/javascript" src="../js/exoTitle.js"></script>
-    <script type="text/javascript" src="../js/emoji.js"></script>
-    <script type="text/javascript" src="../js/rating.js"></script>
     <script type="text/javascript" src="/Js/trush-table-generator.js" async></script>
 </body>
 

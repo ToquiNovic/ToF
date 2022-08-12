@@ -214,6 +214,21 @@ function createTruthTable() {
 
             // Add cell value to table
             table[col][row] = eval(cellPremise);
+			
+			let ultimafila = []
+
+			
+			for (let i = 0; i < table.length; i++) {
+				ultimafila.push(table[i][table[i].length -1])
+			}
+			
+			console.log(ultimafila);
+			/*
+			if
+
+			
+
+			*/
         }
     }
 };
@@ -258,12 +273,4 @@ function createHtmlTable(matrix) {
 		table.appendChild(row);
 	}
 
-	// Create png image & download link
-    html2canvas(document.getElementById('truthTable')).then(canvas => {
-        download.download = 'truth_table.png';
-        // Convert image to Base64
-        download.href = canvas.toDataURL();
-
-        download.style.display = 'inline';
-    });
 }

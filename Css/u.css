@@ -1,0 +1,253 @@
+/*---[TOOLS]---*/
+/*---[3D DICE]---*/
+.scene {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    perspective: 600px;
+}
+
+.scene .dice {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s;
+    cursor: pointer;
+}
+
+.scene .dice .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+	font-size: 70px;
+	font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scene .dice .face:nth-child(1) { /*Front*/
+	background-color: rgba(255, 170, 0, 0.8);
+	transform: rotateY(0deg);
+	transform: rotateY(0deg) translateZ(100px);
+}
+
+.scene .dice .face:nth-child(2) { /*Right*/
+	background-color: rgba(255, 48, 80, 0.8);
+	transform: rotateY(90deg);
+	transform: rotateY(90deg) translateZ(100px);
+}
+
+.scene .dice .face:nth-child(3) { /*Back*/
+	background-color: rgba(255, 170, 0, 0.8);
+	transform: rotateY(180deg);
+	transform: rotateY(180deg) translateZ(100px);
+}
+
+.scene .dice .face:nth-child(4) { /*Left*/
+	background-color: rgba(255, 48, 80, 0.8);
+	transform: rotateY(-90deg);
+	transform: rotateY(-90deg) translateZ(100px);
+}
+
+.scene .dice .face:nth-child(5) { /*Top*/
+	background-color: rgba(16, 137, 255, 0.8);
+	transform: rotateX(90deg);
+	transform: rotateX( 90deg) translateZ(100px);
+}
+
+.scene .dice .face:nth-child(6) { /*Bottom*/
+	background-color: rgba(16, 137, 255, 0.8);
+	transform: rotateX(-90deg);
+	transform: rotateX(-90deg) translateZ(100px);
+}
+
+/*---[TRUTH TABLE]---*/
+.truth.table {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.truth.table table#truthTable {
+	border-collapse: collapse;
+}
+
+.truth.table table td {
+	padding: 5px 8px;
+    border: 1px solid #ddd;
+}
+
+.type.truth-table {
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+.type.truth-table input[type="radio"] {
+	margin: 5px;
+}
+
+/*---[CHRONOMETER]---*/
+section.lap {
+	display: flex;
+	justify-content: center;
+}
+
+table.lap {
+	/*border: 1px solid #ccc;*/
+	background-color: rgba(16, 137, 255, 0.1);
+	border-radius: 3px;
+	padding: 10px;
+}
+
+table.lap thead {
+	font-size: var(--text-size, 22px);
+}
+
+table.lap tbody {
+	font-family: Digital-7, sans-serif;
+	font-size: var(--text-size, 22px);
+	line-height: 20px;
+}
+
+table.lap td {
+	padding: 5px 10px;
+}
+
+/*---[TONE GENERATOR]---*/
+.table.notes {
+	position: absolute;
+	z-index: 1;
+	top: 350px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.table.notes table {
+	background-color: #fff;
+	border: 1px solid #efefef;
+	padding: 5px;
+	-webkit-box-shadow: 0 0px 3px 0 rgba(34,36,38,.2);
+    box-shadow: 0 0px 3px 0 rgba(34,36,38,.2);
+    border-radius: 5px;
+}
+
+.table.notes table tr th#closeNotes {
+	cursor: pointer;
+}
+
+.table.notes table tr td {
+	padding: 3px 7px 3px 7px;
+	background-color: #efefef;
+	border: 0.5px solid #ddd;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+/*---[FANCY TEXT GENERATOR]---*/
+ul.text-styles {
+	min-width: 200px;
+	max-width: 600px;
+	padding-left: 0 !important;
+	list-style: none;
+}
+
+ul.text-styles li {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	cursor: pointer;
+}
+
+ul.text-styles li:nth-child(2n){
+	background-color: #efefef;
+}
+
+ul.text-styles li:hover {
+	background-color: #ccc;
+}
+
+ul.text-styles li p {
+	max-width: 100%;
+	word-break: break-all;
+}
+
+/*---[BURNED CALORIES]---*/
+.burned-calories-calculator.choose-activity {
+	display: flex;
+	flex-direction: column;
+}
+
+.burned-calories-calculator.choose-activity span.ui-selectmenu-button {
+	margin-bottom: 10px;
+}
+
+.burned-calories-calculator.choose-activity input[type="number"] {
+	width: 200px;
+}
+
+.burned-calories-calculator#activities {
+	max-width: 200px;
+	display: flex;
+	flex-direction: column;
+}
+
+.burned-calories-calculator .activity {
+	padding: 7px 10px;
+	margin-bottom: 10px;
+	background-color: rgba(16,137,255,.1);
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.burned-calories-calculator .activity h5 {
+	width: 180px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.burned-calories-calculator .activity span {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*---[RECOMMENDED CALORIES]---*/
+#tool .paso {
+	width: 250px;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+/*---[CONFETTI --> RANDOM NAME PICKER]---*/
+#confetti svg {
+	/*transform-origin: 0 50% 0 !important;
+	top: 350px !important;
+	left: calc(50% - 56.25px) !important;*/
+	width: 200px !important;
+    height: 200px !important;
+    transform: translate3d(0px, 0px, 0px);
+    position: absolute;
+    z-index: -1;
+}
+
+#tool:fullscreen #confetti h3 {
+	font-size: 20vh;
+}
+
+#tool:fullscreen #confetti svg {
+	width: 40vh !important;
+	height: 40vh !important;
+}
