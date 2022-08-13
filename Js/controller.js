@@ -207,28 +207,28 @@ let base_preguntas = readText("/Js/base-preguntas.json")
 			if(posibles_respuestas[0]){
 				select_id("btn1").innerHTML = posibles_respuestas[0]
 			}else {
-				select_id("btn4").style.background = "violet";
+				select_id("btn4").style.background = "transparent";
 				select_id("btn4").innerText = ""
 			}
 
 			if(posibles_respuestas[1]){
 				select_id("btn2").innerHTML = posibles_respuestas[1]
 			}else {
-				select_id("btn4").style.background = "violet";
+				select_id("btn4").style.background = "transparent";
 				select_id("btn4").innerText = ""
 			}
 
 			if(posibles_respuestas[2]){
 				select_id("btn3").innerHTML = posibles_respuestas[2]
 			}else {
-				select_id("btn4").style.background = "violet";
+				select_id("btn4").style.background = "transparent";
 				select_id("btn4").innerText = ""
 			}
 
 			if(posibles_respuestas[3]){
 				select_id("btn4").innerHTML = posibles_respuestas[3]
 			}else {
-				select_id("btn4").style.background = "violet";
+				select_id("btn4").style.background = "transparent";
 				select_id("btn4").innerText = ""
 			}		
 			

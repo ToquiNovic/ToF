@@ -30,7 +30,6 @@ h2{
 }
 
 .caja_tablero{
-	background-color: yellowgreen;
 	width: 700px;
     height: 600px;
     float: left;
@@ -51,17 +50,12 @@ h2{
 	font-size:  8em;
 }
 
-.button_tablero{
-	
-}
-
 #textoVictoria{
 	visibility: hidden;
 	color:whitesmoke;
 }
 
 .caja_preguntas{
-	background-color: violet;
 	width: 550px;
     height: 600px;
     float: left;
@@ -72,7 +66,7 @@ h2{
 }
 
 .encabezado {
-	background-color: rgb(99, 30, 30);
+	background-color: transparent;
 	min-width: 300px;
 	width: 70%;
 	max-width: 600px;

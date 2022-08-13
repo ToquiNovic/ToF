@@ -6,46 +6,43 @@
         <title>ToF - Inicio</title>
         <link rel="icon" href="/Image/icono.png">
         <link rel="stylesheet" href="/Css/index.css">
+
+        <link rel="stylesheet" href="/Css/header&footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
     </head>
-    <body>
-        <header class="bg_animate">
-            <div class="header_nav">
-                <div class="contenedor">
-                <h1>
-                    <a href=#>
-                         <img src="image/Logo-ToF-Pequeño.png" alt="logo ToF" />
-                    </a>
-                </h1>
-                     <nav>
-                         <a href="#">Inicio</a>
-                         <a href="https://es.wikipedia.org/wiki/Tabla_de_verdad" target="_blank">Teoria</a>
-                         <a href="/Html/reglasDeProduccion.html">Practica</a>
-                         <a href="/Html/trush-table-generator.html">Generador</a>
-                         <a href="/Html/tresenraya.html">Jugar</a>
-                    </nav>
-                 </div>
+
+    <header class="headerindex">
+        <div class="hedercontainer">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/image/Logo-ToF-Pequeño.png" alt="logo ToF" />
+               </a>
             </div>
-            <section class="banner contenedor">
-                <secrion class="banner_title">
-                    <h2>ToF <br> JUGAR</h2>
-                    <a href="/Html/tresenraya.html" class="jugar">¡JUGAR!</a>
-                </secrion>
-                <div class="banner_img">
-                    <img src="/Image/Logo-ToF-Grande.png" alt="">
-                </div>
-            </section>
-        </header>
-        <div class="burbujas">
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
-            <div class="burbuja"></div>
+            <nav class="menu">
+                <a href="/index.html">Inicio</a>
+            <a href="https://es.wikipedia.org/wiki/Tabla_de_verdad" target="_blank">Teoria</a>
+            <a href="/Html/reglasDeProduccion.html">Practica</a>
+            <a href="/Html/trush-table-generator.html">Generador</a>
+            <a href="/Html/tresenraya.html">Jugar</a>
+            </nav>
         </div>
+    </header>
+
+    <body>
+        <div id="particles-js"></div>
+        <section class="banner contenedor">
+            <secrion class="banner_title">
+                <h2>ToF <br> JUGAR</h2>
+                <a href="/Html/tresenraya.html" class="jugar">¡JUGAR!</a>
+            </secrion>
+            <div class="banner_img">
+                <img src="/Image/Logo-ToF-Grande.png" alt="">
+            </div>
+        </section>
     </body>
+
+    <script src="/Js/tools/particles.min.js"></script>
+    <script src="/Js/particles.js"></script>
 </html>

@@ -6,7 +6,12 @@
     <meta name="description" content="Generate truth tables from a composed proposition">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <!--<meta name="theme-color" content="#17a2b8">-->
+    
+    <link rel="stylesheet" href="/Css/header&footer.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+
     <link rel="shortcut icon" type="image/png" href="/Image/icono.png">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/css/tabler-icons.min.css">
@@ -16,26 +21,25 @@
 </head>
 
 <body>
-    <header class="normal">
-        <div class="title">
-            <!--<div id="title"></div>-->
-            <h1>
+    <header class="header">
+        <div class="hedercontainer">
+            <div class="logo">
                 <a href="/index.html">
-                     <img src="/image/Logo-ToF-Pequeño.png" alt="logo ToF" />
-                </a>
-            </h1>
-            <nav>
+                    <img src="/image/Logo-ToF-Pequeño.png" alt="logo ToF" />
+               </a>
+            </div>
+            <nav class="menu">
                 <a href="/index.html">Inicio</a>
-                <a href="https://es.wikipedia.org/wiki/Tabla_de_verdad" target="_blank">Teoria</a>
-                <a href="/Html/reglasDeProduccion.html">Practica</a>
-                <a href="/Html/trush-table-generator.html">Generador</a>
-                <a href="/Html/tresenraya.html">Jugar</a>
-           </nav>
+            <a href="https://es.wikipedia.org/wiki/Tabla_de_verdad" target="_blank">Teoria</a>
+            <a href="/Html/reglasDeProduccion.html">Practica</a>
+            <a href="/Html/trush-table-generator.html">Generador</a>
+            <a href="/Html/tresenraya.html">Jugar</a>
+            </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <h2>Generador de Tablas de verdad</h2>
+            <h2 class="titulo">Generador de Tablas de verdad</h2>
             <div class="tool">
                 <input type="text" class="input" id="formula" style="width: 600px;" value="((p⇒q)∧p)⇒q">
                 <table>

@@ -1,0 +1,56 @@
+/*header */
+.headerindex{
+	width: 100%;
+	height: 75px;
+	background: transparent;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	box-shadow: 0px 1px 10px;
+	font-family: 'Press Start 2P';
+}
+
+.header{
+	width: 100%;
+	height: 75px;
+	background: linear-gradient(to right, #1083c5, #054265);
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	box-shadow: 0px 1px 10px;
+	font-family: 'Press Start 2P';
+}
+
+.hedercontainer{
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.logo{
+	float: left;
+	line-height: 75px;
+}
+
+.menu{
+	float: right;
+	line-height: 75px;
+}
+
+.menu a{
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 15px;
+	line-height: normal;
+	font-size: 14px;
+	transition: all 500ms ease;
+	border-bottom: 4px solid transparent;
+}
+
+.menu a:hover{
+	color: red;
+	border-bottom: 4px solid red;
+}
